@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beryl's Chocolate - About Me</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+    
+    <header class="header-container about-header">
+        <div class="about-title-box">
+            <h1 class="section-heading">ABOUT ME</h1>
+            <p class="section-subheading">Meet the Creator</p>
+        </div>
+
+        
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="HOME.html">HOME</a></li>
+                <li><a href="problem.html">PROBLEM</a></li>
+                <li><a href="process.html">PROCESS</a></li>
+                <li><a href="solutions.html">SOLUTIONS</a></li>
+                <li><a href="benefits.html">BENEFITS</a></li>
+                <li><a href="about.html" class="active">ABOUT ME</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main class="about-main">
+
+        
+        <section class="about-top-section">
+            
+            
+            <div class="creator-photo-col">
+                <div class="photo-frame-wrapper">
+                    
+                    <div class="washi-tape"></div>
+                    <div class="creator-photo-box" onclick="openModal(this)">
+                        <img src="../ASSET/PHOTO/self.JPG" alt="Creator Tan Li Tong" onerror="this.src='images/profile-photo.jpg'">
+                    </div>
+                </div>
+                <div class="creator-quote">
+                    <p><em>QUOTE : There is still glory in the future and youth is not afraid of long years</em></p>
+                </div>
+            </div>
+
+            
+            <div class="student-info-col">
+                <div class="info-title-row">
+                    <img src="../ASSET/PHOTO/image.png" alt="Mascot Icon" class="mascot-top-icon" onerror="this.style.display='none'">
+                    <h2 class="info-heading">STUDENT INFORMATION</h2>
+                </div>
+
+                <div class="info-list">
+                    <p><span class="info-label">NAME :</span> TAN LI TONG</p>
+                    <p><span class="info-label">AGE :</span> 22</p>
+                    <p><span class="info-label">BIRTHDAY :</span> 2004/04/02</p>
+                    <p><span class="info-label">COUNTRY :</span> BUTTERWORTH , PENANG</p>
+                    <p><span class="info-label">STUDENT NUMBER :</span> 251573811</p>
+                    <p><span class="info-label">PROGRAMME :</span> TECHNOLOGY MEDIA INTERACTIVE</p>
+                    <p><span class="info-label">COURSE :</span> SMM 10703 Innovative and Creative Skills</p>
+                    <p><span class="info-label">UNIVERSITY :</span> UNIVERSITY MALAYSIA PERLIS (UniMAP)</p>
+                </div>
+
+                
+                <div class="mascot-bottom-box">
+                    <img src="../ASSET/PHOTO/image 2.png" alt="Apple Doll Mascot" class="mascot-bottom-img" onerror="this.src='images/apple-doll.png'">
+                </div>
+            </div>
+
+        </section>
+
+        
+        <section class="about-bottom-section">
+            
+           
+            <div class="bottom-row">
+                
+                
+                <div class="about-stamp-card intro-card">
+                    <div class="intro-card-inner">
+                        <p>Hi! I am TAN LI TONG, a First-Year student pursuing Interactive Media Technology at Universiti Malaysia Perlis (UniMAP). I have a strong passion for digital design, photography and video editing.</p>
+                    </div>
+                </div>
+
+               
+                <div class="music-player-widget">
+                    
+                    <audio id="audioPlayer" src="../ASSET/MUZIC/tnt.mp3" preload="metadata"></audio>
+
+                    <div class="player-header">
+                        <span class="device-name">AirPods</span>
+                        <span class="airplay-icon">⏏</span>
+                    </div>
+                    
+                    <div class="player-body">
+                        
+                        <div class="album-art-box" onclick="togglePlayMusic()" title="Click to Play / Pause Music">
+                            <img src="../ASSET/PHOTO/tnt.jpg" alt="Music Cover" onerror="this.src='images/album-art.jpg'">
+                        </div>
+
+                        
+                        <div class="player-controls">
+                            
+                            <div class="progress-bar-container" onclick="seekAudio(event)">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+                                </div>
+                                <div class="time-labels">
+                                    <span id="currentTime">00:00</span>
+                                    <span id="durationTime">-00:00</span>
+                                </div>
+                            </div>
+
+                           
+                            <div class="control-buttons">
+                                <button type="button" class="btn-prev" onclick="restartAudio()" title="Restart">⏮</button>
+                                <button type="button" class="btn-play-pause" id="playBtn" onclick="togglePlayMusic()" title="Play/Pause">▶</button>
+                                <button type="button" class="btn-next" onclick="forwardAudio()" title="Forward 10s">⏭</button>
+                            </div>
+
+                            
+                            <div class="volume-slider-container">
+                                <span class="vol-icon" onclick="muteAudio()">🔈</span>
+                                <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="0.8" oninput="changeVolume(this.value)" class="volume-range">
+                                <span class="vol-icon" onclick="maxVolume()">🔊</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
+            <div class="bottom-row bottom-row-2">
+                
+                
+                <div class="contact-me-block">
+                    <h3 class="contact-title">CONTACT ME</h3>
+                    <div class="contact-labels">
+                        <span>INSTAGRAM</span>
+                        <span>GMAIL</span>
+                        <span>WHATSAPP</span>
+                        <span>TELEGRAM</span>
+                    </div>
+                    <div class="contact-icons-row">
+                        
+                        <a href="https://www.instagram.com/tongtong__42?igsh=MXBod2Zjam05bmlhNA==" target="_blank" rel="noopener noreferrer" class="social-icon-link" title="Visit my Instagram">
+                            <img src="../ASSET/PHOTO/instagram-logo_971166-164497.avif" alt="Instagram" onerror="this.src='images/icon-instagram.png'">
+                        </a>
+
+                       
+                        <a href="mailto:s251573811@studentmail.unimap.edu.my" class="social-icon-link" title="Send me an Email">
+                            <img src="../ASSET/PHOTO/gmail.png" alt="Gmail" onerror="this.src='images/icon-gmail.png'">
+                        </a>
+
+                        
+                        <a href="https://wa.me/qr/IHNIVNDQOXZOK1" target="_blank" rel="noopener noreferrer" class="social-icon-link" title="Message me on WhatsApp">
+                            <img src="../ASSET/PHOTO/whatsapp.png" alt="WhatsApp" onerror="this.src='images/icon-whatsapp.png'">
+                        </a>
+
+                        
+                        <a href="https://t.me/litonggggg" target="_blank" rel="noopener noreferrer" class="social-icon-link" title="Chat on Telegram">
+                            <img src="../ASSET/PHOTO/telegram.png" alt="Telegram" onerror="this.src='images/icon-telegram.png'">
+                        </a>
+                    </div>
+                </div>
+
+                
+                <div class="about-stamp-card hobbies-card">
+                    <h3 class="hobbies-heading">Interests &amp; Creative Hobbies</h3>
+                    <div class="hobbies-content">
+                        <p><strong>Creative Crafts :</strong> Perler Bead Art &amp; Lego Building</p>
+                        <p><strong>Media &amp; Culture :</strong> Concerts &amp; Live Performances &amp; Pop Culture Trends and Movies</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    
+    <div id="imageModal" class="modal-overlay" onclick="closeModal(event)">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <div class="modal-content-wrapper">
+            <img id="modalImg" class="modal-image" src="" alt="Full Preview">
+            <p id="modalCaption" class="modal-caption"></p>
+        </div>
+    </div>
+
+    
+    <script>
+        
+        const audio = document.getElementById('audioPlayer');
+        const playBtn = document.getElementById('playBtn');
+        const progressFill = document.getElementById('progressFill');
+        const currentTimeEl = document.getElementById('currentTime');
+        const durationTimeEl = document.getElementById('durationTime');
+
+       
+        function togglePlayMusic() {
+            if (audio.paused) {
+                audio.play().then(() => {
+                    playBtn.textContent = '⏸';
+                }).catch(err => {
+                    console.log("Audio play error:", err);
+                    alert("请在文件夹中放入一首音乐并命名为 music.mp3 即可播放！");
+                });
+            } else {
+                audio.pause();
+                playBtn.textContent = '▶';
+            }
+        }
+
+       
+        function restartAudio() {
+            audio.currentTime = 0;
+            audio.play();
+            playBtn.textContent = '⏸';
+        }
+
+        
+        function forwardAudio() {
+            audio.currentTime = Math.min(audio.currentTime + 10, audio.duration);
+        }
+
+        
+        audio.addEventListener('timeupdate', () => {
+            if (audio.duration) {
+                const percent = (audio.currentTime / audio.duration) * 100;
+                progressFill.style.width = percent + '%';
+                
+                currentTimeEl.textContent = formatTime(audio.currentTime);
+                const remaining = audio.duration - audio.currentTime;
+                durationTimeEl.textContent = '-' + formatTime(remaining);
+            }
+        });
+
+        
+        function seekAudio(e) {
+            const bar = e.currentTarget.querySelector('.progress-bar');
+            const rect = bar.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const width = rect.width;
+            if (audio.duration) {
+                audio.currentTime = (clickX / width) * audio.duration;
+            }
+        }
+
+        
+        function changeVolume(val) {
+            audio.volume = val;
+        }
+
+        function muteAudio() {
+            audio.volume = 0;
+            document.getElementById('volumeSlider').value = 0;
+        }
+
+        function maxVolume() {
+            audio.volume = 1;
+            document.getElementById('volumeSlider').value = 1;
+        }
+
+        
+        function formatTime(sec) {
+            if (isNaN(sec)) return '00:00';
+            const m = Math.floor(sec / 60);
+            const s = Math.floor(sec % 60);
+            return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+        }
+
+        audio.addEventListener('loadedmetadata', () => {
+            durationTimeEl.textContent = '-' + formatTime(audio.duration);
+        });
+
+        audio.addEventListener('ended', () => {
+            playBtn.textContent = '▶';
+            progressFill.style.width = '0%';
+        });
+
+       
+        function openModal(boxElement) {
+            const img = boxElement.querySelector('img');
+            if (!img) return;
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            const modalCaption = document.getElementById('modalCaption');
+            
+            modalImg.src = img.src;
+            modalCaption.textContent = img.alt || '';
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event) {
+            if (!event || event.target.id === 'imageModal' || event.target.classList.contains('modal-close')) {
+                const modal = document.getElementById('imageModal');
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
